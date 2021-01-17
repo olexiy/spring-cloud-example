@@ -27,3 +27,21 @@ spec:
         imagePullPolicy: IfNotPresent
         name: mmv2-currency-exchange-service
       restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: currency-exchange
+  name: currency-exchange
+  namespace: default
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+  - port: 8000
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app: currency-exchange
+  sessionAffinity: None
+  type: LoadBalancer
