@@ -1,0 +1,13 @@
+package de.olexiy.in28minutes.microservices.netflixeurecanamingserver;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class NamingServerApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
